@@ -1,0 +1,110 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-03 15:51+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\Project47\settings.py:134
+msgid "English"
+msgstr ""
+
+#: .\Project47\settings.py:135
+msgid "Russian"
+msgstr ""
+
+#: .\myauth\views.py:23
+msgid "Hello world"
+msgstr "Привет, Мир!"
+
+#: .\shopppCat\admin.py:38
+msgid "Price options"
+msgstr ""
+
+#: .\shopppCat\admin.py:42
+msgid "Extra options"
+msgstr ""
+
+#: .\shopppCat\models.py:8
+msgid "Product"
+msgstr "Продукт"
+
+#: .\shopppCat\models.py:9
+#: .\shopppCat\templates\shopppCat\products_list.html:13
+msgid "Products"
+msgstr "Продукты"
+
+#: .\shopppCat\models.py:31
+msgid "Order"
+msgstr "Заказ"
+
+#: .\shopppCat\models.py:32
+msgid "Orders"
+msgstr "Заказы"
+
+#: .\shopppCat\templates\shopppCat\products_list.html:6
+msgid "Products list"
+msgstr "Список продуктов"
+
+#: .\shopppCat\templates\shopppCat\products_list.html:11
+#, fuzzy
+#| msgid "Product"
+msgid "New product"
+msgstr "Продукт"
+
+msgid ""
+"\n"
+"                    "
+msgid_plural ""
+"\n"
+"                    There are %(products_count)s products\n"
+"                "
+msgstr[0] ""
+"\n"
+"            Доступно %(products_count)s товаров\n"
+"        "
+msgstr[1] ""
+"\n"
+"            Доступен %(products_count)s товар\n"
+"        "
+msgstr[2] ""
+"\n"
+"            Доступно %(products_count)s товаров\n"
+"        "
+msgstr[3] ""
+"\n"
+"            Доступно %(products_count)s товаров\n"
+"        "
+
+#: .\shopppCat\templates\shopppCat\products_list.html:23
+msgid "Name"
+msgstr "Название"
+
+#: .\shopppCat\templates\shopppCat\products_list.html:24
+msgid "Discription"
+msgstr "Описание"
+
+#: .\shopppCat\templates\shopppCat\products_list.html:25
+msgid "Price"
+msgstr "Цена"
+
+#: .\shopppCat\templates\shopppCat\products_list.html:26
+#, fuzzy
+#| msgid "Discription"
+msgid "Discount"
+msgstr "Описание"

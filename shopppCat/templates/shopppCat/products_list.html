@@ -1,0 +1,32 @@
+{% extends 'shopppCat/base.html' %}
+
+{% load i18n %}
+
+{% block title %}
+    {% translate 'Products list' %}
+{% endblock %}
+
+{% block body %}
+    <div>
+        <a href="{% url 'shopppCat:create_prod' %}">{% translate 'New product' %}</a>
+    </div>
+<h1>{% translate "Products" %}:</h1>
+        {% if not products %}
+            <h3> Not products yet </h3>
+        {% else %}
+                {% blocktranslate count products_count=products|length %}
+                    {% plural %}
+                    There are {{ products_count }} products
+                {% endblocktranslate %}
+            <div>{% for elem in products  %}</div>
+
+                    <p><a href="{% url 'shopppCat:product-details' pk=elem.pk %}">{% translate 'Name' %}: {{ elem.name }}</a></p>
+                    <p> {% translate 'Discription' %}: {{ elem.discription }}</p>
+                    <p>{% translate 'Price' %} {{ elem.price }}</p>
+                    <p>{% translate 'Discount' %} {{ elem.discount }}</p>
+
+                {% endfor %}
+
+        {% endif %}
+
+{% endblock %}

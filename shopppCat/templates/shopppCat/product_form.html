@@ -1,0 +1,21 @@
+{% extends 'shopppCat/base.html' %}
+
+{% block title %}
+    Create Product
+{% endblock %}
+
+{% block body %}
+    <h1>CReate product</h1>
+    <div>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Create</button>
+        </form>
+    </div>
+    <div>
+      <a href="{% url 'shopppCat:product_list' %}">
+                back to list
+      </a>
+    </div>
+{% endblock %}

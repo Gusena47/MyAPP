@@ -1,0 +1,23 @@
+{% extends 'myauth/base.html' %}
+
+{% block title %}
+Edit
+{% endblock %}
+
+{% block body %}
+<div>
+   <div>
+      <div>
+         <h4>Изменение профиля</h4>
+      </div>
+      <form method="post" enctype="multipart/form-data">
+         {% csrf_token %}
+         {{ user_form.as_p }}
+         {{ form.as_p }}
+         <div>
+            <button type="submit">Подтвердить изменение профиля</button>
+         </div>
+      </form>
+   </div>
+</div>
+{% endblock %}

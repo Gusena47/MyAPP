@@ -1,0 +1,22 @@
+{% extends 'shopppCat/base.html' %}
+
+{% block title %}
+    Edit order
+{% endblock %}
+
+{% block body %}
+    <h1>Edit order</h1>
+    <div>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Edit</button>
+        </form>
+    </div>
+    <div>
+      <p><a href="{% url 'shopppCat:order-detail' pk=object.pk%}">
+                back order #{{ object.pk }}
+      </a></p>
+
+    </div>
+{% endblock %}

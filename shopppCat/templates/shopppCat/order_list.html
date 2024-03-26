@@ -1,0 +1,25 @@
+{% extends 'shopppCat/base.html' %}
+
+{% block title %}
+    Order list
+{% endblock %}
+
+{% block body %}
+<h1>Orders:</h1>
+    {% if not object_list %}
+        <h3>Not order yet</h3>
+    {% else %}
+        <div>{% for elem in object_list  %}</div>
+            <p><a href="{% url 'shopppCat:order-detail' pk=elem.pk %}">Details # {{ order.pk }}</a></p>
+            <p>Order by {% firstof elem.user.username  %}</p>
+            <p> Deliv Addres: {{ elem.delivery_address }}</p>
+            <p> Promo: {{ elem.promo_code }}</p>
+    {% endfor %}
+    {% endif %}
+    <div>
+        <a href="{% url 'shopppCat:create_order' %}">
+            Create new
+        </a>
+    </div>
+
+{% endblock %}

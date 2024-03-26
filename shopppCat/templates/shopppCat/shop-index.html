@@ -1,0 +1,33 @@
+{% extends 'shopppCat/base.html' %}
+
+{% block title %}
+Shop Index
+{% endblock %}
+
+{% block body %}
+<h1>Hello Shop Index</h1>
+<ul>
+   <li class="logo"><a href="{% url 'shopppCat:group-list' %}">Groups</a></li>
+   <li class="logo"><a href="{% url 'shopppCat:product_list' %}">Products</a></li>
+   <li class="logo"><a href="{% url 'shopppCat:order' %}">Orders</a></li>
+</ul>
+
+
+<div>
+    <ul>
+        {% for elem, price in products %}
+            <li>{{ elem }} ({{ elem|length }}) for $ {{ price }}</li>
+        {% if elem|length_is:'7' %}
+        <span> Good product! </span>
+        {% endif %}
+        {% endfor %}
+    </ul>
+</div>
+
+<div>
+    time runnung: {{ time_run }}
+</div>
+
+{% lorem 3 p random %}
+
+{% endblock %}

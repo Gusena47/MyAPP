@@ -1,0 +1,24 @@
+{% extends 'shopppCat/base.html' %}
+{% load cache %}
+
+{% block title %}
+<p>User orders list</p>
+{% endblock %}
+
+{% block body %}
+    {% if orders %}
+        {% for order in orders %}
+            {% cache 200 ower.id %}
+                <p><a href="{% url 'shopppCat:order-detail' pk=elem.pk %}">Details # {{ order.pk }}</a></p>
+                <p>Order by {% firstof order.user.username  %}</p>
+                <p> Deliv Addres: {{ order.delivery_address }}</p>
+                <p> Promo: {{ order.promo_code }}</p>
+                <ul>
+                    {% for product in order.products.all %}
+                        <li>{{ product.name }} for {{ product.price }}</li>
+                    {% endfor %}
+                </ul>
+            {% endcache %}
+        {% endfor %}
+    {% endif %}
+{% endblock %}

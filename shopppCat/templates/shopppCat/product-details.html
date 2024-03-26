@@ -1,0 +1,28 @@
+{% extends 'shopppCat/base.html' %}
+
+{% block title %}
+    Product # {{ products.pk }}
+{% endblock %}
+
+{% block body %}
+    <h1>Product <strong>{{ products.name }}</strong></h1>
+    <div>Description: {{ products.discription }}</div>
+    <div>Price: {{ products.price }}</div>
+    <div>Discount: {{ products.discount }}</div>
+    <div>Arhived: {{ products.arhivate }}</div>
+    <div>
+        <p>
+          <a href="{% url 'shopppCat:product_update' pk=products.pk %}">edit</a>
+        </p>
+    </div>
+    <div>
+        <p>
+          <a href="{% url 'shopppCat:delete' pk=products.pk %}">delete</a>
+        </p>
+    </div>
+    <div>
+        <p>
+           <a href="{% url 'shopppCat:product_list' %}">Back to list</a>
+        </p>
+    </div>
+{% endblock %}

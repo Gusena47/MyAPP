@@ -1,0 +1,30 @@
+{% extends 'myauth/base.html' %}
+
+{% block title %}
+Пользователь
+{% endblock %}
+
+{% block body %}
+<div>
+        <div>
+            <div>
+                <figure>
+                    <img src="{{ profile.avatar.url }}" alt="{{ profile }}">
+                </figure>
+                <div>
+                    <div>
+                        <ul>
+                            <li>Имя {{ profile.user.username }}</li>
+                            <li>О себе: {{ profile.bio }}</li>
+                        </ul>
+
+                    </div>
+                </div>
+                <a href="{% url 'myauth:users' %}">
+            Back to list
+                </a>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

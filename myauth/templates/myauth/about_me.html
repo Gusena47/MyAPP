@@ -1,0 +1,28 @@
+{% extends 'myauth/base.html' %}
+
+{% block title %}
+About me
+{% endblock %}
+
+{% block body %}
+
+    <h1>User info</h1>
+
+        <h2>Detail</h2>
+        {% if user.profile.avatar %}
+            <p><img src="{{user.profile.avatar.url}}" alt="avatar"></p>
+        {% else %}
+            no avatar
+        {% endif %}
+            {% if user.is_staff or request.user == user.profile.user %}
+                <p></p><a href="{% url 'myauth:about_edit' %}">Редактировать профиль</a></p>
+            {% endif %}
+        <p>Username: {{user.username}}</p>
+        <p>First name: {{user.firs_name}}</p>
+        <p>Last name: {{user.last_name}}</p>
+        <p>Email: {{user.email}}</p>
+        <p>Bio: {{user.profile.bio}}</p>
+
+
+
+{% endblock %}

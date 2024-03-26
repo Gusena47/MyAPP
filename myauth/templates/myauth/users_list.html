@@ -1,0 +1,16 @@
+{% extends 'shopppCat/base.html' %}
+
+{% block title %}
+    Users list
+{% endblock %}
+
+{% block body %}
+<h1>Users:</h1>
+    {% if not object_list %}
+        <h3>Not order yet</h3>
+    {% else %}
+        <div>{% for elem in profiles  %}</div>
+            <p><a href="{% url 'myauth:profile' pk=elem.pk %}">Details # {{ elem.user.username }}</a></p>
+            {% endfor %}
+    {% endif %}
+{% endblock %}

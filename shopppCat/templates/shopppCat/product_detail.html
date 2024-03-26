@@ -1,0 +1,19 @@
+{% extends 'shopppCat/base.html' %}
+
+{% block title %}
+    Product # {{ product.pk }}
+{% endblock %}
+
+{% block body %}
+    <h1>Product <strong>{{ product.name }}</strong></h1>
+    <div>Description: {{ product.description }}</div>
+    <div>Price: {{ product.price }}</div>
+    <div>Discount: {{ product.discount }}</div>
+    <div>Arhived: {{ product.arhived }}</div>
+    <div>
+        <a href="">edit</a>
+    </div>
+    <div>
+        <a href="{% url 'shopppCat:product_list' %}">Back to list</a>
+    </div>
+{% endblock %}

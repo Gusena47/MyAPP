@@ -1,0 +1,23 @@
+{% extends 'shopppCat/base.html' %}
+
+{% block title %}
+    Delete {{ object.name }}
+{% endblock %}
+
+{% block body %}
+<h2>Delete? {{ object.name }}</h2>
+<div>
+ <a href="{% url 'shopppCat:order-detail' pk=object.pk%}">
+                back product #{{ object.pk }}
+      </a>
+</div>
+    <div>
+        <hr>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Delete</button>
+        </form>
+    </div>
+
+{% endblock %}
